@@ -149,7 +149,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6230b2559fe544171b469d2a70428f27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: {x: 0, y: 0}
+  size: {x: 50, y: 50}
+  colors:
+  - serializedVersion: 2
+    rgba: 4294967295
+  - serializedVersion: 2
+    rgba: 4278190335
+  - serializedVersion: 2
+    rgba: 4294950656
+  - serializedVersion: 2
+    rgba: 4294639871
+  - serializedVersion: 2
+    rgba: 4280520235
 --- !u!4 &22558421
 Transform:
   m_ObjectHideFlags: 0

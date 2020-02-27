@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MapGenerations : MonoBehaviour
+
+
 {
     [SerializeField]
     Vector2Int size;
@@ -20,20 +23,47 @@ public class MapGenerations : MonoBehaviour
     [SerializeField]
     Color32[] colors;
 
-
-
-    // Start is called before the first frame update
+// Start is called before the first frame update
     void Start()
     {
         GenerateMap();
-        
-        
+        states[5, 5] = State.infected;
+        states[27,47] = State.infected;
+        states[38, 38] = State.doctor;
+        states[26, 15] = State.doctor;
+        states[49, 5] = State.doctor;
+        states[4, 47] = State.doctor;
+        states[6, 30] = State.doctor;
+        states[28, 31] = State.doctor;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         RenderGrid();
+
+    }
+
+
+    void VirusSpread()
+    {
+        for (int y = 1; y <= size.y; y++)
+        {
+            for (int x = 1; x <= size.x; x++)
+            {
+                State currentState = states[x - 1, y - 1];
+
+                switch (currentState)
+                {
+                    case State.infected:
+
+                        break;
+                }
+
+            }
+
+        }
     }
 
     void RenderGrid()

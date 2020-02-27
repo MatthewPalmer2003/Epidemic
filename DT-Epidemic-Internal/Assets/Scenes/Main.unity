@@ -156,11 +156,11 @@ MonoBehaviour:
   - serializedVersion: 2
     rgba: 4278190335
   - serializedVersion: 2
-    rgba: 4294950656
+    rgba: 4294965760
   - serializedVersion: 2
-    rgba: 4294639871
+    rgba: 4291756287
   - serializedVersion: 2
-    rgba: 4280520235
+    rgba: 4280200448
 --- !u!4 &22558421
 Transform:
   m_ObjectHideFlags: 0

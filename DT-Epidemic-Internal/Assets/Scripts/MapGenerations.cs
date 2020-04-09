@@ -42,7 +42,6 @@ public class MapGenerations : MonoBehaviour
     void Update()
     {
         RenderGrid();
-
     }
 
 
@@ -57,6 +56,10 @@ public class MapGenerations : MonoBehaviour
                 switch (currentState)
                 {
                     case State.infected:
+                        
+                        break;
+
+                    case State.doctor:
 
                         break;
                 }

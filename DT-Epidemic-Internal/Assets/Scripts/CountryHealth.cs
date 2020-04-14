@@ -7,6 +7,13 @@ public class CountryHealth : MonoBehaviour
 {
     public Slider slider;
 
+    public Text sliderText;
+
+    void Start()
+    {
+        sliderText.text = "Country Health";
+    }
+
     public void SetMaxHealth(int health)
     {
         slider.maxValue = health;

@@ -50,8 +50,11 @@ public class Player : MonoBehaviour
         //{
         //    TakeDamage(50000);
         //}
+
+
     }
 
+    //Taking the players health and updating it so that they are taking damage
     void TakeDamage(int damage)
     {
         //currentHealth -= damage;

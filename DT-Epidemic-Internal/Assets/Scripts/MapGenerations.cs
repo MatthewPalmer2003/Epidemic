@@ -24,6 +24,7 @@ public class MapGenerations : MonoBehaviour
     Color32[] colors;
 
 // Start is called before the first frame update
+//Setting the color of a set coordinate to a solid color that doesn't change
     void Start()
     {
         GenerateMap();

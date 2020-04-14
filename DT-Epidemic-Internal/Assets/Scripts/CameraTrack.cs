@@ -14,16 +14,7 @@ public class CameraTrack : MonoBehaviour
 	Vector2 posOffset;
 
     [SerializeField]
-    float leftLimit;
-
-    [SerializeField]
-    float rightLimit;
-
-    [SerializeField]
-    float topLimit;
-
-    [SerializeField]
-    float bottomLimit;
+    float leftLimit, rightLimit, topLimit, bottomLimit;
 
     private Vector3 velocity;
 
@@ -53,24 +44,22 @@ public class CameraTrack : MonoBehaviour
         transform.position = new Vector3
         (
         Mathf.Clamp(transform.position.x, leftLimit, rightLimit),
-        Mathf.Clamp(transform.position.y, topLimit, bottomLimit),
+        Mathf.Clamp(transform.position.y, bottomLimit, topLimit),
         transform.position.z
         );
+    }
 
-        void OnDrawGizmos()
-        {
-            //Draw a box around our camera boundary
-            Gizmos.color = Color.red;
-            // Top boundary line
-            Gizmos.DrawLine(new Vector2(leftLimit, topLimit), new Vector2(rightLimit, topLimit));
-            //Right boundary line
-            Gizmos.DrawLine(new Vector2(rightLimit, topLimit), new Vector2(rightLimit, bottomLimit));
-            //Bottom boundary line
-            Gizmos.DrawLine(new Vector2(rightLimit, bottomLimit), new Vector2(leftLimit, bottomLimit));
-            //Left boundary line
-            Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(leftLimit, topLimit));
-        }
-
-
+    private void OnDrawGizmos()
+    {
+        //Draw a box around our camera boundary
+        Gizmos.color = Color.red;
+        // Top boundary line
+        Gizmos.DrawLine(new Vector2(leftLimit, topLimit), new Vector2(rightLimit, topLimit));
+        //Right boundary line
+        Gizmos.DrawLine(new Vector2(rightLimit, topLimit), new Vector2(rightLimit, bottomLimit));
+        //Bottom boundary line
+        Gizmos.DrawLine(new Vector2(rightLimit, bottomLimit), new Vector2(leftLimit, bottomLimit));
+        //Left boundary line
+        Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(leftLimit, topLimit));
     }
 }

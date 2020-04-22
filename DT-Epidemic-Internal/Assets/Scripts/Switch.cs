@@ -7,7 +7,7 @@ public class Switch : MonoBehaviour
     [SerializeField]
     Sprite onSprite, offSprite;
 
-    public bool isOn = false;
+    public bool isOn = true;
 
     void Start()
         

@@ -27,14 +27,6 @@ public class GroundControl : MonoBehaviour
     }
 
 
-
-    void Update()
-    {
-
-    }
-
-
-
     private void OnTriggerEnter2D(Collider2D col)
     {
         TakeDamage(groundDamage);
@@ -47,7 +39,7 @@ public class GroundControl : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D col)
     {
         if (lastDamageTime + timeBetweenHits < Time.time)
         {

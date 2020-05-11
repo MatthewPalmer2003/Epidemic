@@ -26,9 +26,9 @@ public class Player : MonoBehaviour
         playerMovement = GetComponent<PlayerMovement>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    //// Update is called once per frame
+    //void Update()
+    //{
         /*The below code was used to test if the health bar would function,
          ie decrease the health when the player is touching the ground */
 
@@ -57,10 +57,10 @@ public class Player : MonoBehaviour
     }
 
     //Taking the players health and updating it so that they are taking damage
-    void TakeDamage(int damage)
-    {
-        //currentHealth -= damage;
+    //void TakeDamage(int damage)
+    //{
+    //    //currentHealth -= damage;
 
-        //healthBar.SetHealth(currentHealth);
-    }
+    //    //healthBar.SetHealth(currentHealth);
+    //}
 }

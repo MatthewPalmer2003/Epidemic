@@ -31,12 +31,21 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private float jumpSpeed = 4f;
 
+
     // use this for initialization
     void Start()
     {
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+
+        
+
+    }
+
+    void Update()
+    {
+        //if()
     }
 
     //Fixed Update is more efficient when using physics than using normal Update.

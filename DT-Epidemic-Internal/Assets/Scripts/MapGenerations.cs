@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+//This script isn't being used
 public class MapGenerations : MonoBehaviour
 
 

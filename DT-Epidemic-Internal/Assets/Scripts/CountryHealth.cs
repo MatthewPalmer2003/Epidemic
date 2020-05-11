@@ -24,4 +24,5 @@ public class CountryHealth : MonoBehaviour
     {
         slider.value = health;
     }
+
 }

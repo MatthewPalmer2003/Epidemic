@@ -19,8 +19,8 @@ public class Timer : MonoBehaviour
 
     private float timer;
     private bool canCount = true;
-    private bool doOnce = false;
-    private bool stopTimer = true;
+    //private bool doOnce = false;
+    //private bool stopTimer = true;
 
 
     // Start is called before the first frame update

@@ -39,4 +39,13 @@ public class Switch : MonoBehaviour
         }
            
     }
+
+    public void OnHitGround()
+    {
+        //Sets the switch to the on sprite
+        gameObject.GetComponent<SpriteRenderer>().sprite = onSprite;
+
+        //Sets the isOn to true when triggered
+        isOn = true;
+    }
 }

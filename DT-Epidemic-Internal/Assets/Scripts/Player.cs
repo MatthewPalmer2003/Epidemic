@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+
+//This script isn't being used
 public class Player : MonoBehaviour
 {
     public int maxHealth = 100;
@@ -28,7 +30,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         /*The below code was used to test if the health bar would function,
-         ie go down when the player is touching the ground in this case */
+         ie decrease the health when the player is touching the ground */
 
         //if (playerMovement.isGrounded)
         //{

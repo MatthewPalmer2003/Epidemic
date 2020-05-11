@@ -8,7 +8,7 @@ public class GroundControl : MonoBehaviour
     //Used for the health bar
     public int maxHealth = 100;
 
-    public int currentHealth;
+    public float currentHealth;
 
     public CountryHealth healthBar;
 
@@ -51,7 +51,7 @@ public class GroundControl : MonoBehaviour
 
 
     //Taking the players health and updating it so that they are taking damage
-    void TakeDamage(int damage)
+    void TakeDamage(float damage)
     {
         currentHealth -= damage;
 

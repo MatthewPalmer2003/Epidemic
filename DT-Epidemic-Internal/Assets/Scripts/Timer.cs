@@ -18,9 +18,11 @@ public class Timer : MonoBehaviour
     bool startTimer = true;
 
     private float timer;
-    private bool canCount = true;
+    //private bool canCount = true;
     //private bool doOnce = false;
     //private bool stopTimer = true;
+
+    public GroundControl groundControl;
 
 
     // Start is called before the first frame update
@@ -37,11 +39,14 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (timer >= 0.0f && canCount && switchController.isOn)
+        if (timer >= 0.0f && switchController.isOn)
         {
             timer += Time.deltaTime;
             uiText.text = timer.ToString("F");
+            TakeDamage(Time.deltaTime);
         }
+
+        
 
         //else if(timer <= 0.0f && !doOnce)
         //{
@@ -62,6 +67,14 @@ public class Timer : MonoBehaviour
         //    stopTimer = false;
         //    Debug.Log("Start the timer again");
         //}
+    }
+
+
+    void TakeDamage(float damage)
+    {
+        groundControl.currentHealth -= damage;
+
+        groundControl.healthBar.SetHealth(groundControl.currentHealth);
     }
 
     //private void YouLose()

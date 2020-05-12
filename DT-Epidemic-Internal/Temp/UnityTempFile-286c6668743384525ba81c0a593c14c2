@@ -297,6 +297,7 @@
 "Assets/Scripts/CameraTrack.cs"
 "Assets/Scripts/CountryHealth.cs"
 "Assets/Scripts/Credits.cs"
+"Assets/Scripts/EndMenu.cs"
 "Assets/Scripts/GroundControl.cs"
 "Assets/Scripts/Intro.cs"
 "Assets/Scripts/MainMenu.cs"

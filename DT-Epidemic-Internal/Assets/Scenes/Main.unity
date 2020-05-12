@@ -1288,8 +1288,8 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 0
   healthBar: {fileID: 1062607534}
-  groundDamage: 1
-  timeBetweenHits: 0.5
+  groundDamage: 5
+  timeBetweenHits: 2
 --- !u!1 &757730608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1530,6 +1530,7 @@ MonoBehaviour:
   mainTimer: 0
   switchController: {fileID: 1350952784}
   startTimer: 1
+  groundControl: {fileID: 750387765}
 --- !u!114 &962670185
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3101,6 +3102,7 @@ MonoBehaviour:
   mainTimer: 0
   switchController: {fileID: 463472429}
   startTimer: 1
+  groundControl: {fileID: 750387765}
 --- !u!1 &2132536096
 GameObject:
   m_ObjectHideFlags: 0

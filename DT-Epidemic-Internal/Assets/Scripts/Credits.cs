@@ -1,18 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Credits : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Text textDisplay;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        textDisplay.text = "Lost Relic Gaming youtube channel" + "\n" + "";
     }
 }

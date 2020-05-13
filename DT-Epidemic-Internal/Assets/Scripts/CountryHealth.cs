@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountryHealth : MonoBehaviour
 {
@@ -23,6 +24,15 @@ public class CountryHealth : MonoBehaviour
     public void SetHealth(float health)
     {
         slider.value = health;
+    }
+
+    void Update()
+    {
+        if (slider.value <= 0)
+        {
+            SceneManager.LoadScene("YouLose");
+        }
+
     }
 
 }

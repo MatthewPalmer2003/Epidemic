@@ -4,42 +4,42 @@ using UnityEngine;
 
 public class CameraTrack : MonoBehaviour
 {
-	[SerializeField]
-	GameObject player;
+    [SerializeField]
+    GameObject player;
 
-	[SerializeField]
-	int timeOffset;
+    [SerializeField]
+    int timeOffset;
 
-	[SerializeField]
-	Vector2 posOffset;
+    [SerializeField]
+    Vector2 posOffset;
 
     [SerializeField]
     float leftLimit, rightLimit, topLimit, bottomLimit;
 
     private Vector3 velocity;
 
-	void Start()
-	{
+    void Start()
+    {
 
-	}
+    }
 
-	void Update()
-	{
-		//Cameras current position
-		Vector3 startPos = transform.position;
+    void Update()
+    {
+        //Cameras current position
+        Vector3 startPos = transform.position;
 
-		//Players current position
-		Vector3 endPos = player.transform.position;
+        //Players current position
+        Vector3 endPos = player.transform.position;
 
-		endPos.x += posOffset.x;
-		endPos.y += posOffset.y;
-		endPos.z = -10;
+        endPos.x += posOffset.x;
+        endPos.y += posOffset.y;
+        endPos.z = -10;
 
-		//This is how you use Smooth Dampening
-		//transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
+        //This is how you use Smooth Dampening
+        //transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
 
-		//This is how you Lerp
-		transform.position = Vector3.Lerp(startPos, endPos, timeOffset * Time.deltaTime);
+        //This is how you Lerp
+        transform.position = Vector3.Lerp(startPos, endPos, timeOffset * Time.deltaTime);
 
         transform.position = new Vector3
         (

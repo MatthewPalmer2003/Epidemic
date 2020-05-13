@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -44,6 +45,11 @@ public class Timer : MonoBehaviour
             timer += Time.deltaTime;
             uiText.text = timer.ToString("F");
             TakeDamage(Time.deltaTime);
+        }
+
+        if (timer <= 99.99f && !switchController.isOn)
+        {
+            SceneManager.LoadScene("Level2");
         }
 
         

@@ -29,29 +29,29 @@ public class Player : MonoBehaviour
     //// Update is called once per frame
     //void Update()
     //{
-        /*The below code was used to test if the health bar would function,
-         ie decrease the health when the player is touching the ground */
+    /*The below code was used to test if the health bar would function,
+     ie decrease the health when the player is touching the ground */
 
-        //if (playerMovement.isGrounded)
-        //{
-        //    playerMovement.isGrounded = true;
-        //    TakeDamage(1);
-        //}
+    //if (playerMovement.isGrounded)
+    //{
+    //    playerMovement.isGrounded = true;
+    //    TakeDamage(1);
+    //}
 
-        //if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.RightArrow)))
-        //{
-        //    TakeDamage(1);
-        //}
+    //if (Input.GetKeyDown(KeyCode.A) || (Input.GetKeyDown(KeyCode.RightArrow)))
+    //{
+    //    TakeDamage(1);
+    //}
 
-        //else if (Input.GetKeyDown(KeyCode.D) || (Input.GetKeyDown(KeyCode.LeftArrow)))
-        //{
-        //    TakeDamage(1);
-        //}
+    //else if (Input.GetKeyDown(KeyCode.D) || (Input.GetKeyDown(KeyCode.LeftArrow)))
+    //{
+    //    TakeDamage(1);
+    //}
 
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //{
-        //    TakeDamage(50000);
-        //}
+    //if (Input.GetKeyDown(KeyCode.Space))
+    //{
+    //    TakeDamage(50000);
+    //}
 
 
     //}

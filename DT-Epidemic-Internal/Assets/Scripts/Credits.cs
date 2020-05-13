@@ -9,6 +9,6 @@ public class Credits : MonoBehaviour
 
     void Start()
     {
-        textDisplay.text = "Lost Relic Gaming youtube channel" + "\n" + "";
+        textDisplay.text = "Game Creator:" + "\n" + "Matthew Palmer" + "\n" + "\n" + "Client:" + "\n" + "Mark Palmer" + "\n" + "\n" + "Lost Relic Gaming youtube channel" + "\n" + "Joshua Browne" + "\n" + "";
     }
 }

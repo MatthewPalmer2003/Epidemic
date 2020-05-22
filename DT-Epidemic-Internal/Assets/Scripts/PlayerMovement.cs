@@ -111,6 +111,11 @@ public class PlayerMovement : MonoBehaviour
             animator.Play("Player_jump");
         }
 
+        if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
+        {
+            rb2d.velocity = new Vector2(rb2d.velocity.x, jumpSpeed);
+            animator.Play("Player_jump");
+        }
 
 
     }

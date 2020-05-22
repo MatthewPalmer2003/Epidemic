@@ -47,12 +47,12 @@ public class Timer : MonoBehaviour
             TakeDamage(Time.deltaTime);
         }
 
-        if (timer <= 99.99f && !switchController.isOn)
-        {
-            SceneManager.LoadScene("Level2");
-        }
+        //if (timer <= 99.99f && switchController.isOn)
+        //{
+        //    SceneManager.LoadScene("Level2");
+        //}
 
-        
+
 
         //else if(timer <= 0.0f && !doOnce)
         //{

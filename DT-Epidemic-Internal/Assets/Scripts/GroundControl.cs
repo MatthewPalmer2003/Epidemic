@@ -19,7 +19,7 @@ public class GroundControl : MonoBehaviour
 
     [SerializeField]
     float timeBetweenHits;
-  
+
     void Start()
     {
         currentHealth = maxHealth;

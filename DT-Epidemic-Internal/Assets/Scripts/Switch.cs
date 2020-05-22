@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Switch : MonoBehaviour
 {
@@ -12,8 +13,8 @@ public class Switch : MonoBehaviour
     void Start()
         
     {
-        //Sets the switch to the off sprite
-        gameObject.GetComponent<SpriteRenderer>().sprite = offSprite;
+        //Sets the switch to the on sprite
+        gameObject.GetComponent<SpriteRenderer>().sprite = onSprite;
     }
 
 
@@ -24,6 +25,7 @@ public class Switch : MonoBehaviour
         {
             //Sets the switch to the on sprite
             gameObject.GetComponent<SpriteRenderer>().sprite = onSprite;
+
 
             //Sets the isOn to true when triggered
             isOn = true;

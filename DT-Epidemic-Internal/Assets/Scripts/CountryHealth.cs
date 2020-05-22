@@ -10,6 +10,7 @@ public class CountryHealth : MonoBehaviour
 
     public Text sliderText;
 
+
     void Start()
     {
         sliderText.text = "Country Health";

@@ -9,22 +9,16 @@ public class EndMenu : MonoBehaviour
 {
     public Text textDisplay;
 
-    //Displays in a textbox on the screen "Game over!"
     void Start()
     {
         textDisplay.text = "Game over!";
     }
 
-    //Loads the Main Menu scene
-    public void MainMenu()
+
+    public void PlayAgain()
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-    //Loads the Main or first level of the game
-    public void PlayAgain()
-    {
-        SceneManager.LoadScene("Main");
-    }
     
 }

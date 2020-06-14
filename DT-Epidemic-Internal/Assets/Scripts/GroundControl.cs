@@ -26,7 +26,7 @@ public class GroundControl : MonoBehaviour
         healthBar.SetMaxHealth(maxHealth);
     }
 
-    //Detects when the switch has been set to off and stops taking damage from the player
+
     private void OnTriggerEnter2D(Collider2D col)
     {
         TakeDamage(groundDamage);
@@ -39,7 +39,6 @@ public class GroundControl : MonoBehaviour
         }
     }
 
-    //Damages the player when they are on the base ground level 
     private void OnTriggerStay2D(Collider2D col)
     {
         if (lastDamageTime + timeBetweenHits < Time.time)

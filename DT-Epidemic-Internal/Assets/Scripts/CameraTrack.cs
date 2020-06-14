@@ -31,7 +31,6 @@ public class CameraTrack : MonoBehaviour
         //Players current position
         Vector3 endPos = player.transform.position;
 
-        //This is to offset the camera from the player
         endPos.x += posOffset.x;
         endPos.y += posOffset.y;
         endPos.z = -10;
@@ -42,7 +41,6 @@ public class CameraTrack : MonoBehaviour
         //This is how you Lerp
         transform.position = Vector3.Lerp(startPos, endPos, timeOffset * Time.deltaTime);
 
-        //Sets the maximum and minimum position that the camera can move to. This is changes in the inspector inside unity.
         transform.position = new Vector3
         (
         Mathf.Clamp(transform.position.x, leftLimit, rightLimit),

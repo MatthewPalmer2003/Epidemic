@@ -291,6 +291,7 @@
 /define:ENABLE_TIMELINE
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
+"Assets/NPCControl.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/CameraTrack.cs"
 "Assets/Scripts/CountryHealth.cs"
@@ -301,7 +302,6 @@
 "Assets/Scripts/Intro.cs"
 "Assets/Scripts/MainMenu.cs"
 "Assets/Scripts/MapGenerations.cs"
-"Assets/Scripts/NPCControl.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PlayerMovement.cs"
 "Assets/Scripts/SceneManagers.cs"

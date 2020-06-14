@@ -11,7 +11,7 @@ public class HowToPlay : MonoBehaviour
 
     void Start()
     {
-        textDisplay.text = "To move left, press the left arrowkey. To move right, press the right arrowkey. To jump, press the space bar or the up arrowkey." + "\n"
+        textDisplay.text = "To move left, press the left arrowkey or A. To move right, press the right arrowkey or D. To jump, press the space bar, the up arrowkey or W." + "\n"
             + "\n" + "The Objective of the game is to turn on/off switches to keep your country healthy.";
     }
 

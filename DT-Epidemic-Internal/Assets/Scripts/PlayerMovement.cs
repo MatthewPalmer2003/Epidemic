@@ -38,9 +38,6 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        
-
     }
 
     void Update()
@@ -59,8 +56,8 @@ public class PlayerMovement : MonoBehaviour
         if (PlayerIsOnGround())
         {
 
-           //Debug.Log("on the ground");
-           isGrounded = true;
+            //Debug.Log("on the ground");
+            isGrounded = true;
         }
 
         else
@@ -80,7 +77,6 @@ public class PlayerMovement : MonoBehaviour
 
             //Flips the sprite on the x axis (sprite is facing in the opposite direction)
             spriteRenderer.flipX = false;
-
         }
 
         //Takes the player input and moves the player in that idrection and plays the run animation
@@ -96,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //If the player is not moving the character then it will play the idle animation
-        else
+        else 
         {
             if (isGrounded)
                 animator.Play("Player_idle");
@@ -118,20 +114,20 @@ public class PlayerMovement : MonoBehaviour
         }
 
 
-    }
-    // Detecting whether player hits the ground to re enable ability to jump (using raycasts)
-    public bool PlayerIsOnGround()
-    {
-        bool groundCheck1 = Physics2D.Raycast(groundCheck.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
-        //Debug.DrawRay(groundCheck.position, -Vector2.up);
-        bool groundCheck2 = Physics2D.Raycast(groundCheckL.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
-        bool groundCheck3 = Physics2D.Raycast(groundCheckR.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
-        if (groundCheck1 || groundCheck2 || groundCheck3)
-        {
-            return true;
-        }
-        return false;
-    }
 
-
+    }
+        // Detecting whether player hits the ground to re enable ability to jump (using raycasts)
+         public bool PlayerIsOnGround()
+         {
+            bool groundCheck1 = Physics2D.Raycast(groundCheck.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
+            //Debug.DrawRay(groundCheck.position, -Vector2.up);
+            bool groundCheck2 = Physics2D.Raycast(groundCheckL.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
+            bool groundCheck3 = Physics2D.Raycast(groundCheckR.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
+            if (groundCheck1 || groundCheck2 || groundCheck3)
+            {
+                return true;
+            }
+            return false;
+         }
+    
 }

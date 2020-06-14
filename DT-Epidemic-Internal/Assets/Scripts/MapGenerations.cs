@@ -24,8 +24,8 @@ public class MapGenerations : MonoBehaviour
     [SerializeField]
     Color32[] colors;
 
-// Start is called before the first frame update
-//Setting the color of a set coordinate to a solid color that doesn't change
+    //Start is called before the first frame update
+    //Setting the color of a set coordinate to a solid color that doesn't change
     void Start()
     {
         GenerateMap();
@@ -47,6 +47,7 @@ public class MapGenerations : MonoBehaviour
     }
 
 
+     
     void VirusSpread()
     {
         for (int y = 1; y <= size.y; y++)
@@ -71,6 +72,8 @@ public class MapGenerations : MonoBehaviour
         }
     }
 
+
+    //Generated a grid the size of which could be changed manually
     void RenderGrid()
     {
         for (int y = 1; y <= size.y; y++)

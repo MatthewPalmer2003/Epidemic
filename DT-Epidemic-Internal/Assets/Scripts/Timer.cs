@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
     {
         timer = mainTimer;
 
+        //Only starts the timer if switch is set to on which it is by default.
         if (startTimer)
         {
             switchController.isOn = true;
@@ -40,6 +41,7 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Control for the timers in the top right corner of the screen. They only run when the switch is on and pause when they turn off.
         if (timer >= 0.0f && switchController.isOn)
         {
             timer += Time.deltaTime;
@@ -75,7 +77,7 @@ public class Timer : MonoBehaviour
         //}
     }
 
-
+    //Updates the damage to the player
     void TakeDamage(float damage)
     {
         groundControl.currentHealth -= damage;

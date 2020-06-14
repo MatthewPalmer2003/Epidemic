@@ -5,7 +5,7 @@ using UnityEngine;
 public class GroundControl : MonoBehaviour
 {
 
-    //Used for the health bar
+    // Used for the health bar
     public int maxHealth = 100;
 
     public float currentHealth;
@@ -50,7 +50,7 @@ public class GroundControl : MonoBehaviour
     }
 
 
-    //Taking the players health and updating it so that they are taking damage
+    // Taking the players health and updating it so that they are taking damage
     void TakeDamage(float damage)
     {
         currentHealth -= damage;

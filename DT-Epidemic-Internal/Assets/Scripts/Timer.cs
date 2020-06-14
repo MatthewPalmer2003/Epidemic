@@ -19,9 +19,9 @@ public class Timer : MonoBehaviour
     bool startTimer = true;
 
     private float timer;
-    //private bool canCount = true;
-    //private bool doOnce = false;
-    //private bool stopTimer = true;
+    // private bool canCount = true;
+    // private bool doOnce = false;
+    // private bool stopTimer = true;
 
     public GroundControl groundControl;
 
@@ -47,32 +47,32 @@ public class Timer : MonoBehaviour
             TakeDamage(Time.deltaTime);
         }
 
-        //if (timer <= 99.99f && switchController.isOn)
-        //{
+        // if (timer <= 99.99f && switchController.isOn)
+        // {
         //    SceneManager.LoadScene("Level2");
-        //}
+        // }
 
 
 
-        //else if(timer <= 0.0f && !doOnce)
-        //{
+        // else if(timer <= 0.0f && !doOnce)
+        // {
         //    canCount = false;
         //    doOnce = true;
         //    uiText.text = "0.00";
         //    timer = 0.0f;
-        //}
+        // }
 
-        //if (switchController.isOn == false)
-        //{
+        // if (switchController.isOn == false)
+        // {
         //    stopTimer = true;
         //    Debug.Log("Stop the timer");
-        //}
+        // }
 
-        //else
-        //{
+        // else
+        // {
         //    stopTimer = false;
         //    Debug.Log("Start the timer again");
-        //}
+        // }
     }
 
 
@@ -83,8 +83,8 @@ public class Timer : MonoBehaviour
         groundControl.healthBar.SetHealth(groundControl.currentHealth);
     }
 
-    //private void YouLose()
-    //{
+    // private void YouLose()
+    // {
 
-    //}
+    // }
 }

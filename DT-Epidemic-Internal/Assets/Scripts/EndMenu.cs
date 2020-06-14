@@ -17,8 +17,12 @@ public class EndMenu : MonoBehaviour
 
     public void PlayAgain()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Main");
     }
 
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
     
 }

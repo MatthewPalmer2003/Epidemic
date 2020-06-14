@@ -25,20 +25,20 @@ public class CameraTrack : MonoBehaviour
 
     void Update()
     {
-        //Cameras current position
+        // Cameras current position
         Vector3 startPos = transform.position;
 
-        //Players current position
+        // Players current position
         Vector3 endPos = player.transform.position;
 
         endPos.x += posOffset.x;
         endPos.y += posOffset.y;
         endPos.z = -10;
 
-        //This is how you use Smooth Dampening
-        //transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
+        // This is how you use Smooth Dampening
+        // transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
 
-        //This is how you Lerp
+        // This is how you Lerp
         transform.position = Vector3.Lerp(startPos, endPos, timeOffset * Time.deltaTime);
 
         transform.position = new Vector3
@@ -51,15 +51,15 @@ public class CameraTrack : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        //Draw a box around our camera boundary
+        // Draw a box around our camera boundary
         Gizmos.color = Color.red;
         // Top boundary line
         Gizmos.DrawLine(new Vector2(leftLimit, topLimit), new Vector2(rightLimit, topLimit));
-        //Right boundary line
+        // Right boundary line
         Gizmos.DrawLine(new Vector2(rightLimit, topLimit), new Vector2(rightLimit, bottomLimit));
-        //Bottom boundary line
+        // Bottom boundary line
         Gizmos.DrawLine(new Vector2(rightLimit, bottomLimit), new Vector2(leftLimit, bottomLimit));
-        //Left boundary line
+        // Left boundary line
         Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(leftLimit, topLimit));
     }
 }

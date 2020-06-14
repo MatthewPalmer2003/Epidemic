@@ -13,7 +13,7 @@ public class Switch : MonoBehaviour
     void Start()
         
     {
-        //Sets the switch to the on sprite
+        // Sets the switch to the on sprite
         gameObject.GetComponent<SpriteRenderer>().sprite = onSprite;
     }
 
@@ -23,20 +23,20 @@ public class Switch : MonoBehaviour
     {
         if (!isOn)
         {
-            //Sets the switch to the on sprite
+            // Sets the switch to the on sprite
             gameObject.GetComponent<SpriteRenderer>().sprite = onSprite;
 
 
-            //Sets the isOn to true when triggered
+            // Sets the isOn to true when triggered
             isOn = true;
         }
 
         else
         {
-            //Sets the switch to the off sprite
+            // Sets the switch to the off sprite
             gameObject.GetComponent<SpriteRenderer>().sprite = offSprite;
 
-            //Sets the isOn to false when triggered
+            // Sets the isOn to false when triggered
             isOn = false;
         }
            
@@ -44,10 +44,10 @@ public class Switch : MonoBehaviour
 
     public void OnHitGround()
     {
-        //Sets the switch to the on sprite
+        // Sets the switch to the on sprite
         gameObject.GetComponent<SpriteRenderer>().sprite = onSprite;
 
-        //Sets the isOn to true when triggered
+        // Sets the isOn to true when triggered
         isOn = true;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//This script isn't being used
+// This script isn't being used
 public class MapGenerations : MonoBehaviour
 
 
@@ -25,7 +25,7 @@ public class MapGenerations : MonoBehaviour
     Color32[] colors;
 
 // Start is called before the first frame update
-//Setting the color of a set coordinate to a solid color that doesn't change
+// Setting the color of a set coordinate to a solid color that doesn't change
     void Start()
     {
         GenerateMap();
@@ -99,7 +99,7 @@ public class MapGenerations : MonoBehaviour
                 obj.name = "Cell: (" + x + "," + y + ")";
                 obj.transform.position = new Vector2(x, y);
                 obj.transform.SetParent(parent.transform);
-                //Debug.Log("Cell: (" + x + "," + y + ")");
+                // Debug.Log("Cell: (" + x + "," + y + ")");
 
                 spriteRenderers[x - 1, y - 1] = obj.GetComponent<SpriteRenderer>();
 

@@ -7,6 +7,7 @@ public class Credits : MonoBehaviour
 {
     public Text textDisplay;
 
+    // Displays text to a textbox on screen
     void Start()
     {
         textDisplay.text = "Game Creator:" + "\n" + "Matthew Palmer" + "\n" + "\n" + "Client:" + "\n" + "Mark Palmer" +

@@ -8,6 +8,7 @@ public class Intro : MonoBehaviour
 {
     public Text textDisplay;
 
+    // Displays text to a textbox on screen
     void Start()
     {
         textDisplay.text = "You are the Prime Minister of New Zealand and your goal is to navigate " +

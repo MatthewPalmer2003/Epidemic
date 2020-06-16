@@ -20,31 +20,35 @@ public class GroundControl : MonoBehaviour
     [SerializeField]
     float timeBetweenHits;
 
+    
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
 
-
+    // Detects when the switch has been set to off and stops taking damage from the player
     private void OnTriggerEnter2D(Collider2D col)
     {
         TakeDamage(groundDamage);
 
         lastDamageTime = Time.time;
 
+        // Detects when the player hits the ground and resets the switches to their original state
         foreach(Switch s in FindObjectsOfType<Switch>())
         {
             s.OnHitGround();
         }
     }
 
+    // Damages the player when they are on the base ground level 
     private void OnTriggerStay2D(Collider2D col)
     {
         if (lastDamageTime + timeBetweenHits < Time.time)
         {
             TakeDamage(groundDamage);
 
+            // This sets a time between the extra damage that is taken from the player when they are on the ground level
             lastDamageTime = Time.time;
         }
     }

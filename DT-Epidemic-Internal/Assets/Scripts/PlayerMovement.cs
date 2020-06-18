@@ -38,35 +38,19 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         rb2d = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
-
-        
-
-    }
-
-    void Update()
-    {
-        
     }
 
     // Fixed Update is more efficient when using physics than using normal Update.
     private void FixedUpdate()
     {
-        // I was originally using a linecast but decided it would be easier to use a raycast instead as I unerstood this better.
-
-        // if ((Physics2D.Linecast(transform.position, groundcheck.position, 1 << LayerMask.NameToLayer(""))) ||
-        //        (Physics2D.Linecast(transform.position, groundcheckR.position, 1 << LayerMask.NameToLayer("Ground"))) ||
-        //        (Physics2D.Linecast(transform.position, groundcheckL.position, 1 << LayerMask.NameToLayer("Ground"))))
 
         if (PlayerIsOnGround())
         {
-
-           // Debug.Log("on the ground");
            isGrounded = true;
         }
 
         else
         {
-            // Debug.Log("in the air");
             isGrounded = false;
             animator.Play("Player_jump");
         }
@@ -120,7 +104,6 @@ public class PlayerMovement : MonoBehaviour
     public bool PlayerIsOnGround()
     {
         bool groundCheck1 = Physics2D.Raycast(groundCheck.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
-        // Debug.DrawRay(groundCheck.position, -Vector2.up);
         bool groundCheck2 = Physics2D.Raycast(groundCheckL.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
         bool groundCheck3 = Physics2D.Raycast(groundCheckR.position, -Vector2.up, raycastLength, LayerMask.GetMask("Ground"));
         if (groundCheck1 || groundCheck2 || groundCheck3)

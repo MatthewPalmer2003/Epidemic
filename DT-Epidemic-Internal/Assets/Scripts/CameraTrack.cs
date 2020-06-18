@@ -18,10 +18,6 @@ public class CameraTrack : MonoBehaviour
 
     private Vector3 velocity;
 
-    void Start()
-    {
-
-    }
 
     void Update()
     {
@@ -36,8 +32,6 @@ public class CameraTrack : MonoBehaviour
         endPos.y += posOffset.y;
         endPos.z = -10;
 
-        // This is how you use Smooth Dampening
-        // transform.position = Vector3.SmoothDamp(startPos, endPos, ref velocity, timeOffset);
 
         // This is how you Lerp
         transform.position = Vector3.Lerp(startPos, endPos, timeOffset * Time.deltaTime);

@@ -9,6 +9,7 @@ public class HowToPlay : MonoBehaviour
 {
     public Text textDisplay;
 
+    // Displays text to a textbox on screen
     void Start()
     {
         textDisplay.text = "To move left, press the left arrowkey. To move right, press the right arrowkey. To jump, press the space bar or the up arrowkey." + "\n"
